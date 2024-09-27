@@ -14,43 +14,43 @@ const WeatherIcon = ({ val, className }) => {
     <div>
       {(val === '01d' || val === '01n') && (
         <IoSunny
-          className={`${val === '01n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '01n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '02d' || val === '02n') && (
         <IoPartlySunnySharp
-          className={`${val === '02n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '02n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '03d' || val === '03n') && (
         <FaCloud
-          className={`${val === '03n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '03n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '04d' || val === '04n') && (
         <BsCloudsFill
-          className={`${val === '04n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '04n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '09d' || val === '09n') && (
         <BsCloudRainFill
-          className={`${val === '09n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '09n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '10d' || val === '10n') && <WiDayRain className={className} />}
       {(val === '11d' || val === '11n') && (
         <BsCloudLightningFill
-          className={`${val === '11n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '11n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '13d' || val === '13n') && (
         <FaSnowflake
-          className={`${val === '13n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '13n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
       {(val === '50d' || val === '50n') && (
         <RiMistLine
-          className={`${val === '50n' ? 'text-[#000000bc]' : ''} ${className}`}
+          className={`${val === '50n' ? 'text-[#000000]' : ''} ${className}`}
         />
       )}
     </div>

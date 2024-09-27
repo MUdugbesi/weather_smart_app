@@ -10,7 +10,7 @@
     background-image: url('./assets/Background_.jpg');
   }
   .overlay {
-    @apply absolute inset-0 bg-[#267ff4] bg-opacity-30 z-0;
+    @apply absolute inset-0 bg-[#000000] bg-opacity-30 z-0;
   }
 }
 
@@ -21,17 +21,17 @@
   }
 
   .input {
-    @apply outline-none h-full w-full pl-11 caret-white text-[#000000] bg-transparent text-[21px] placeholder:font-rubik placeholder:text-[#ffffffba] placeholder:text-[20px] placeholder:pl-1 font-mono;
+    @apply  outline-none h-full w-full pl-11 caret-white text-[#ffffff] bg-transparent text-[21px] placeholder:font-rubik placeholder:text-[#ffffffba] placeholder:text-[20px] placeholder:pl-1 font-mono;
   }
   .search {
-    @apply absolute ml-2 text-[27px] cursor-pointer text-[#0000ffa5] active:text-[white] active:scale-[1.1];
+    @apply absolute ml-2 text-[27px] hover:cursor-pointer text-[#ffffff] active:text-[white] active:scale-[1.1];
   }
   .clear {
-    @apply absolute mr-1 right-0 text-[20px] cursor-pointer text-[#ff00009d] active:text-[red] active:scale-[1.1];
+    @apply absolute mr-1 right-0 text-[20px] cursor-pointer text-[#ff0000] active:text-[red] active:scale-[1.1];
   }
   .mainCard,
   .miniCard {
-    @apply bg-[#132edf40];
+    @apply bg-[#4f5ebebb];
     filter: blur(0.5px);
   }
   hr {
@@ -85,9 +85,9 @@
     @apply text-white text-4xl uppercase font-[900] font-rubik tracking-widest transition-all delay-75 duration-500 ease-in-out;
   }
   .title:hover {
-    -webkit-text-stroke: 2px rgba(0, 0, 255, 0.727);
-    -webkit-text-fill-color: rgba(251, 251, 251, 0.727);
-    @apply cursor-pointer;
+    @apply cursor-pointer text-white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px white;
   }
   p:title {
     @apply bg-red-50;

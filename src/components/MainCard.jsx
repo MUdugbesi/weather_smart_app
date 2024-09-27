@@ -60,15 +60,15 @@ const MainCard = ({ data, weatherData }) => {
         </>
       ) : (
         <>
-          <div className='flex flex-col justify-center items-center text-black'>
-            <p className='font-mono text-[46px]'>
+          <div className='flex flex-col justify-center items-center text-[white]'>
+            <p className='font-mono text-[56px]'>
               Hi <span className='font-[700]'>User!</span>
             </p>
             <p className=' text-[30px] mb-4'>
               Welcome to the{' '}
               <span className='italic font-[600]'>smart weather app</span>
             </p>
-            <p className='text-black text-[20px] font-roboto'>
+            <p className='text-[white] text-[20px] font-roboto'>
               Enter a search location to get weather reports
             </p>
           </div>
