@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-screen w-screen relative p-0 m-0 box-border bg-[url('src/assets/Background_.jpg')] bg-cover bg-no-repeat font-rubik;
+  }
+  .overlay {
+    @apply absolute inset-0 bg-[#267ff4] bg-opacity-30 z-0;
+  }
+}
+
+@layer components {
+  .input_ctn {
+    @apply flex items-center relative border-2 w-[20%] h-[48px] rounded-md;
+    filter: drop-shadow(16px 20px 8px rgba(0, 0, 0, 0.537));
+  }
+
+  .input {
+    @apply outline-none h-full w-full pl-11 caret-white text-[#000000] bg-transparent text-[21px] placeholder:font-rubik placeholder:text-[#ffffffba] placeholder:text-[20px] placeholder:pl-1 font-mono;
+  }
+  .search {
+    @apply absolute ml-2 text-[27px] cursor-pointer text-[#0000ffa5] active:text-[white] active:scale-[1.1];
+  }
+  .clear {
+    @apply absolute mr-1 right-0 text-[20px] cursor-pointer text-[#ff00009d] active:text-[red] active:scale-[1.1];
+  }
+  .mainCard,
+  .miniCard {
+    @apply bg-[#132edf40];
+    filter: blur(0.5px);
+  }
+  hr {
+    @apply w-[80%] rounded-full border-2 mx-auto;
+  }
+
+  .main_card_content,
+  .mini_card_content {
+    @apply text-white z-10;
+  }
+  .temp {
+    @apply flex items-center justify-evenly mt-14;
+  }
+  .dateAndTime {
+    @apply flex justify-between items-center border w-[80%] mx-auto mt-5 p-1 rounded-md shadow-sm shadow-black;
+  }
+  .z10 {
+    @apply z-10;
+  }
+
+  .windSpeed,
+  .humidity {
+    @apply h-[75px] text-center p-2 rounded-lg mt-5 shadow-2xl drop-shadow-[0px_2px_5px_#3d8da3];
+  }
+  .windSpeed p,
+  .humidity p {
+    @apply text-[18px] font-[600];
+  }
+
+  .description {
+    @apply text-center capitalize text-[32px] font-[700] font-mono pb-10 mt-5;
+  }
+  .weather_icon {
+    @apply text-white;
+  }
+  .mini-display {
+    @apply absolute w-full h-[40px] flex justify-center items-center z-20 rounded-b-lg bottom-0 bg-[#228ed7] text-white hover:cursor-pointer hover:text-[#000000] active:text-red-300 transition-all delay-0 duration-300 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .nav {
+    @apply flex w-[80%] mx-auto justify-between pt-14;
+  }
+  .content {
+    @apply relative z-10;
+  }
+  .title {
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    @apply text-white text-4xl uppercase font-[900] font-rubik tracking-widest transition-all delay-75 duration-500 ease-in-out;
+  }
+  .title:hover {
+    -webkit-text-stroke: 2px rgba(0, 0, 255, 0.727);
+    -webkit-text-fill-color: rgba(251, 251, 251, 0.727);
+    @apply cursor-pointer;
+  }
+  p:title {
+    @apply bg-red-50;
+  }
+}
