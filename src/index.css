@@ -6,22 +6,22 @@
 
 @layer base {
   body {
-    @apply h-screen w-screen relative p-0 m-0 box-border bg-cover bg-no-repeat font-rubik;
+    @apply min-h-screen w-screen relative p-0 m-0 box-border bg-cover bg-no-repeat font-rubik;
     background-image: url('./assets/Background_.jpg');
   }
   .overlay {
-    @apply absolute inset-0 bg-[#000000] bg-opacity-30 z-0;
+    @apply absolute inset-0 bg-[#434242] bg-opacity-30 z-0;
   }
 }
 
 @layer components {
   .input_ctn {
-    @apply flex items-center relative border-2 w-[20%] h-[48px] rounded-md;
+    @apply flex items-center relative border-2 w-[70%] md:w-[30%] lg:w-[20%] h-[44px] md:h-[48px] max-sm:mt-5 rounded-md;
     filter: drop-shadow(16px 20px 8px rgba(0, 0, 0, 0.537));
   }
 
   .input {
-    @apply  outline-none h-full w-full pl-11 caret-white text-[#ffffff] bg-transparent text-[21px] placeholder:font-rubik placeholder:text-[#ffffffba] placeholder:text-[20px] placeholder:pl-1 font-mono;
+    @apply outline-none h-full w-full pl-11 caret-white text-[#ffffff] bg-transparent text-[18px] md:text-[21px] placeholder:font-rubik placeholder:text-[#ffffffba] placeholder:text-[20px] placeholder:pl-1 font-mono;
   }
   .search {
     @apply absolute ml-2 text-[27px] hover:cursor-pointer text-[#ffffff] active:text-[white] active:scale-[1.1];
@@ -31,7 +31,7 @@
   }
   .mainCard,
   .miniCard {
-    @apply bg-[#4f5ebebb];
+    @apply bg-[#4f5ebe9f];
     filter: blur(0.5px);
   }
   hr {
@@ -74,10 +74,10 @@
 
 @layer utilities {
   .nav {
-    @apply flex w-[80%] mx-auto justify-between pt-14;
+    @apply flex w-screen md:w-[90%] lg:w-[80%] mx-auto items-center justify-center md:justify-between pt-14 flex-col md:flex-row;
   }
   .content {
-    @apply relative z-10;
+    @apply relative z-10 max-lg:pb-10;
   }
   .title {
     -webkit-text-stroke: 2px rgb(255, 255, 255);

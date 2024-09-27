@@ -51,7 +51,7 @@ const MiniCard = ({ data, onClick }) => {
           </div>
         </div>
       ) : (
-        'eded'
+        ''
       )}
     </>
   );

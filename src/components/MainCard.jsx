@@ -12,14 +12,14 @@ const MainCard = ({ data, weatherData }) => {
     <>
       {weatherData.cod && data.dt ? (
         <>
-          <div className='w-[65%] mx-auto h-full p-5 rounded-lg mainCard absolute'></div>
-          <div className='main_card_content w-[65%] hover:scale-[1.01] transition-all delay-0 duration-300 ease-linear'>
+          <div className='w-full md:w-[70%] lg:w-[65%] mx-auto h-full p-5 rounded-lg mainCard absolute'></div>
+          <div className='main_card_content w-full md:w-[70%] lg:w-[65%] hover:scale-[1.01] transition-all delay-0 duration-300 ease-linear'>
             <div className='temp'>
               <WeatherIcon
                 val={data.weather[0].icon}
-                className='weather_icon size-36'
+                className='weather_icon size-24 md:size-36'
               />
-              <p className='text-white font-[700] text-[60px]'>
+              <p className='text-white font-[700] text-[50px] md:text-[60px]'>
                 {convertKelvinToCelcius(data.main.temp)}
               </p>
             </div>{' '}
@@ -59,20 +59,7 @@ const MainCard = ({ data, weatherData }) => {
           </div>
         </>
       ) : (
-        <>
-          <div className='flex flex-col justify-center items-center text-[white]'>
-            <p className='font-mono text-[56px]'>
-              Hi <span className='font-[700]'>User!</span>
-            </p>
-            <p className=' text-[30px] mb-4'>
-              Welcome to the{' '}
-              <span className='italic font-[600]'>smart weather app</span>
-            </p>
-            <p className='text-[white] text-[20px] font-roboto'>
-              Enter a search location to get weather reports
-            </p>
-          </div>
-        </>
+        ''
       )}
     </>
   );

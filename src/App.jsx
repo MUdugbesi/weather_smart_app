@@ -12,7 +12,7 @@ const App = () => {
   const [lon, setLon] = useState(null);
   const [dateLists, setDateLists] = useState([]);
   const [dateArr, setDateArr] = useState([]);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState(null);
   const [generatedDateArry, setGeneratedDataArray] = useState([]);
   const [originalMiniData, setOriginalMiniData] = useState(null);
 
@@ -62,6 +62,7 @@ const App = () => {
     } else {
       setMainData([]);
       setMiniData([]);
+      setWeatherData(null);
     }
   }, [lat, lon, input]);
 
@@ -143,23 +144,23 @@ const App = () => {
           fetchData={fetchWeatherData}
           setLat={setLat}
           setLon={setLon}
+          setWeatherData={setWeatherData}
         />
 
         {weatherData && originalMiniData ? (
           <>
-            <div className='grid mt-14 grid-cols-2 w-[80%] mx-auto gap-10 min-h-[65vh] p-4'>
+            <div className='grid mt-14 grid-cols-1 lg:grid-cols-2 w-full md:w-[80%] mx-auto gap-10 min-h-[65vh] p-4'>
               {' '}
               <div className='relative flex justify-center'>
                 <MainCard data={mainData} weatherData={weatherData} />
               </div>
-              <div className='grid gap-8 grid-cols-3 justify-center items-center'>
+              <div className='grid gap-8 grid-cols-2 md:grid-cols-3 justify-center items-center w-full lg:h-[45vh] lg:mt-24'>
                 {originalMiniData.map((data) => {
                   return (
                     <MiniCard
                       data={data}
                       key={data.dt}
                       onClick={() => handleMiniCard(data)}
-                      
                     />
                   );
                 })}
@@ -167,7 +168,18 @@ const App = () => {
             </div>
           </>
         ) : (
-          ''
+          <div className='flex flex-col justify-center items-center text-[white] w-screen h-[60vh]'>
+            <p className='font-mono text-[30px] md:text-[56px] text-center'>
+              Hi <span className='font-[700]'>User!</span>
+            </p>
+            <p className='text-[18px] md:text-[30px] mb-4 text-center'>
+              Welcome to the{' '}
+              <span className='italic font-[600]'>smart weather app</span>
+            </p>
+            <p className='text-[white] text-sm md:text-[20px] italic font-roboto text-center'>
+              Enter a search location to get weather reports
+            </p>
+          </div>
         )}
       </div>
     </>

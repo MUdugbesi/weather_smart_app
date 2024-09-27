@@ -2,7 +2,14 @@
 import { useState } from 'react';
 import Input from './Input';
 
-const Nav = ({ input, setInput, fetchData, setLat, setLon }) => {
+const Nav = ({
+  input,
+  setInput,
+  fetchData,
+  setLat,
+  setLon,
+  setWeatherData,
+}) => {
   const handleInputChange = ({ target }) => {
     setInput(target.value);
   };
@@ -22,6 +29,7 @@ const Nav = ({ input, setInput, fetchData, setLat, setLon }) => {
     setInput('');
     setLat(0);
     setLon(0);
+    setWeatherData(null);
   };
 
   return (
