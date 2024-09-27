@@ -6,7 +6,8 @@
 
 @layer base {
   body {
-    @apply h-screen w-screen relative p-0 m-0 box-border bg-[url('src/assets/Background_.jpg')] bg-cover bg-no-repeat font-rubik;
+    @apply h-screen w-screen relative p-0 m-0 box-border bg-cover bg-no-repeat font-rubik;
+    background-image: url('./assets/Background_.jpg');
   }
   .overlay {
     @apply absolute inset-0 bg-[#267ff4] bg-opacity-30 z-0;
